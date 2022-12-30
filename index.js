@@ -22,16 +22,16 @@ const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology:
 
 async function run() {
   try {
-    const userCollection = client.db("spectra").collection("users");
+    // const userCollection = client.db("spectra").collection("users");
     const commentCollection = client.db("spectra").collection("comments");
     // create a document to insert
-    const user = {
-      title: "Record of a Shriveled Datum",
-      content: "No bytes, no problem. Just insert a document, in MongoDB",
-    }
+    // const user = {
+    //   title: "Record of a Shriveled Datum",
+    //   content: "No bytes, no problem. Just insert a document, in MongoDB",
+    // }
 
-    const result = await userCollection.insertOne(user);
-    console.log(`A document was inserted with the _id: ${result}`);
+    // const result = await userCollection.insertOne(user);
+    // console.log(`A document was inserted with the _id: ${result}`);
 
     app.get('/create', async (req, res) =>{
       const query = {};
